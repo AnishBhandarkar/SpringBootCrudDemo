@@ -39,5 +39,15 @@ public class StudentController {
                 .body(studentList);
     }
 
+    @GetMapping("check")
+    public String testMethod() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        return "Hello there!";
+    }
+
 
 }
